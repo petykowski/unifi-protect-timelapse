@@ -1,0 +1,14 @@
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+### venv ###
+.venv/
+
+### Application Related ###
+config.py
+
+### Python ###
+__pycache__/
