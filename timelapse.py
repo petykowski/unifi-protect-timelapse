@@ -10,7 +10,6 @@ from config import *
 from PIL import Image
 from constant import *
 
-
 # Shared state
 snapshot_count = 1
 motion_event = asyncio.Event()
@@ -40,8 +39,6 @@ def clean_up_snapshots():
     if item.endswith(".jpeg"):
       print('Deleting', os.path.join( dir_name, item ))
       os.remove(os.path.join( dir_name, item ))
-
-  shutil.rmtree(tmp_dir)
 
 async def capture_snapshot_async(session):
     """Asynchronously captures and processes the image."""
@@ -193,3 +190,4 @@ if __name__ == "__main__":
         generate_timelapse()
         generate_timelapse_ha()
         clean_up_snapshots()
+        shutil.rmtree(tmp_dir)
