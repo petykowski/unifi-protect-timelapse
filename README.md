@@ -46,7 +46,6 @@ ha_detection_entity_id = 'input_boolean.name_of_motion_detector'
 
 If virual environment is not already running
 ```bash
-python -m venv .venv
 source .venv/bin/activate
 ```
 Otherwise

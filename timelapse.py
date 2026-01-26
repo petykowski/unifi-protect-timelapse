@@ -32,13 +32,12 @@ def generate_timelapse_ha():
 def clean_up_snapshots():
   # Clean Up
   print('-- STARTING CLEAN UP --')
-  dir_name = os.path.abspath(os.getcwd())
-  files = os.listdir(dir_name)
+  files = os.listdir(tmp_dir)
 
   for item in files:
     if item.endswith(".jpeg"):
-      print('Deleting', os.path.join( dir_name, item ))
-      os.remove(os.path.join( dir_name, item ))
+      print('Deleting', os.path.join( tmp_dir, item ))
+      os.remove(os.path.join( tmp_dir, item ))
 
 async def capture_snapshot_async(session):
     """Asynchronously captures and processes the image."""
